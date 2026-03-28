@@ -88,11 +88,11 @@ function createWhatsAppUrl(message) {
 }
 
 function createProductWhatsAppUrl(productId) {
-  return createWhatsAppUrl(`Hello, I want to order ${productId}. Please share details.`);
+  return createWhatsAppUrl(`Hello, I saw your website and I’m interested in ${productId}. Please share details.`);
 }
 
 function createCustomWhatsAppUrl() {
-  return createWhatsAppUrl("Hello, I want custom furniture for my home.");
+  return createWhatsAppUrl("Hello, I saw your website and I’m interested in custom furniture. Please share details.");
 }
 
 function formatStartingPrice(price) {
@@ -104,13 +104,13 @@ function renderHeader() {
   if (!host) return;
   const current = pageName();
   const links = [["index","Home","index.html"],["products","Products","products.html"],["about","About","about.html"],["contact","Contact","contact.html"],["help","Help","help.html"],["feedback","Feedback","feedback.html"]];
-  host.innerHTML = `<header class="site-header"><div class="container header-inner"><a class="brand" href="index.html" aria-label="Premium Wooden Furniture home"><span class="brand-mark">Premium Wooden Furniture</span><small>Made-to-measure comfort and carpentry</small></a><div class="header-right"><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><nav id="site-nav" class="site-nav" data-open="false" aria-label="Primary navigation">${links.map(([key,label,href]) => `<a href="${href}" ${current === key ? 'aria-current="page"' : ""}>${label}</a>`).join("")}</nav><a class="button header-cta" href="${createCustomWhatsAppUrl()}" target="_blank" rel="noreferrer">WhatsApp Us</a></div></div></header>`;
+  host.innerHTML = `<header class="site-header"><div class="container header-inner"><a class="brand" href="index.html" aria-label="Elite Wood Interiors by Krishan Kumar home"><span class="brand-mark">Elite Wood Interiors by Krishan Kumar</span><small>Built Strong. Designed Beautiful.</small></a><div class="header-right"><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button><nav id="site-nav" class="site-nav" data-open="false" aria-label="Primary navigation">${links.map(([key,label,href]) => `<a href="${href}" ${current === key ? 'aria-current="page"' : ""}>${label}</a>`).join("")}</nav><a class="button header-cta" href="${createCustomWhatsAppUrl()}" target="_blank" rel="noreferrer">WhatsApp Us</a></div></div></header>`;
 }
 
 function renderFooter() {
   const host = document.getElementById("site-footer");
   if (!host) return;
-  host.innerHTML = `<footer class="site-footer"><div class="container"><div class="footer-grid"><div><a class="brand" href="index.html"><span class="brand-mark">Premium Wooden Furniture</span><small>Premium interiors, custom storage, and handmade woodwork.</small></a><p class="text-muted">From bedrooms and living rooms to modular kitchens and doors, we build warm spaces with durable materials and careful finishing.</p></div><div><h3>Quick Links</h3><div class="footer-links"><a href="products.html">Browse Products</a><a href="about.html">Our Story</a><a href="help.html">FAQs</a><a href="feedback.html">Share Feedback</a></div></div><div><h3>Contact</h3><div class="footer-links"><a href="${createCustomWhatsAppUrl()}" target="_blank" rel="noreferrer">WhatsApp: +91 97295 02887</a><span class="text-muted">Serving your city and nearby locations</span></div></div></div><div class="footer-meta"><span>&copy; <span id="year"></span> Premium Wooden Furniture. All rights reserved.</span><a href="contact.html">Fast quotes on WhatsApp</a></div></div></footer>`;
+  host.innerHTML = `<footer class="site-footer"><div class="container"><div class="footer-grid"><div><a class="brand" href="index.html"><span class="brand-mark">Elite Wood Interiors by Krishan Kumar</span><small>Built Strong. Designed Beautiful.</small></a><p class="text-muted">From bedrooms and living rooms to modular kitchens and doors, we build warm spaces with durable materials and careful finishing.</p></div><div><h3>Quick Links</h3><div class="footer-links"><a href="products.html">Browse Products</a><a href="about.html">Our Story</a><a href="help.html">FAQs</a><a href="feedback.html">Share Feedback</a></div></div><div><h3>Contact</h3><div class="footer-links"><a href="${createCustomWhatsAppUrl()}" target="_blank" rel="noreferrer">WhatsApp: +91 97295 02887</a><span class="text-muted">Siha, Rewari (Pin - 123411), Mahendragarh Road</span></div></div></div><div class="footer-meta"><span>&copy; <span id="year"></span> Elite Wood Interiors by Krishan Kumar. All rights reserved.</span><a href="contact.html">Fast quotes on WhatsApp</a></div></div></footer>`;
 }
 
 function renderFloatingWhatsApp() {
