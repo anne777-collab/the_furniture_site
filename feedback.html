@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Send your feedback to Premium Wooden Furniture through a simple front-end form.">
+    <title>Feedback | Premium Wooden Furniture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-page="feedback">
+    <div id="site-header"></div>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <div class="panel" data-reveal>
+            <span class="eyebrow">Feedback</span>
+            <h1>Tell us what you want improved, changed, or quoted next</h1>
+            <p class="lede">This form stays on the front end only. It gives visitors a lightweight way to share thoughts without relying on a backend.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container split-grid">
+          <div class="feedback-card" data-reveal>
+            <h2>Share your message</h2>
+            <p class="form-note">If you want the fastest follow-up, you can also contact us directly on WhatsApp after submitting this message.</p>
+            <form id="feedback-form" novalidate>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" placeholder="Your name">
+                </div>
+                <div class="field">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Share your feedback, idea, or requirement"></textarea>
+                </div>
+                <div class="error-message" id="feedback-error" aria-live="polite"></div>
+                <button class="button" type="submit">Submit Feedback</button>
+                <div class="success-message" id="feedback-success" hidden aria-live="polite"></div>
+              </div>
+            </form>
+          </div>
+          <div class="panel" data-reveal>
+            <h2>Prefer WhatsApp instead?</h2>
+            <p>For quotes, room dimensions, or faster back-and-forth, WhatsApp remains the easiest channel. It is especially helpful when you want to share photos or inspiration references.</p>
+            <a class="button" href="https://wa.me/919729502887?text=Hello%2C%20I%20want%20custom%20furniture%20for%20my%20home." target="_blank" rel="noreferrer">Open WhatsApp</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+    <div id="floating-whatsapp"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

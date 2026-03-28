@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse premium wooden furniture products across beds, sofas, almirahs, doors, and modular kitchens.">
+    <title>Products | Premium Wooden Furniture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-page="products">
+    <div id="site-header"></div>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <div class="panel" data-reveal>
+            <span class="eyebrow">Product catalog</span>
+            <h1>Browse our current furniture references</h1>
+            <p class="lede">Filter the collection by category and message us directly from any product card when you want pricing details, custom sizing, or finish options.</p>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="filters" data-reveal aria-label="Product categories">
+            <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-chip" type="button" data-filter="bed" aria-pressed="false">Beds</button>
+            <button class="filter-chip" type="button" data-filter="sofa" aria-pressed="false">Sofas</button>
+            <button class="filter-chip" type="button" data-filter="almirah" aria-pressed="false">Almirahs</button>
+            <button class="filter-chip" type="button" data-filter="door" aria-pressed="false">Doors</button>
+            <button class="filter-chip" type="button" data-filter="kitchen" aria-pressed="false">Kitchen</button>
+          </div>
+          <div id="products-grid" class="products-grid" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+    <div id="floating-whatsapp"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
