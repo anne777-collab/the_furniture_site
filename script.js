@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "919729502887";
+const WHATSAPP_NUMBER = "919466496249";
 
 const catalog = [
   { id: "B1", title: "Signature Panel Bed", price: "Starting from ₹XX,XXX", material: "Sheesham wood", category: "bed", image: "assets/images/bed/1.jpg" },
